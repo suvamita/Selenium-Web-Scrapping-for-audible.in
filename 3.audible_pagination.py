@@ -11,7 +11,7 @@ path = 'C:/Users/user/Downloads/chromedriver.exe'
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
     
-    # Navigate to Google
+   
 driver.get(web)
 driver.maximize_window()
 
