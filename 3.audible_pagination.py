@@ -1,12 +1,17 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 import time
-from selenium.webdriver.chrome.service import Service
 from selenium import *
 web ='https://www.audible.in/adblbestsellers?ref=a_hp_t1_navTop_pl1cg0c1r0&pf_rd_p=4e150d5e-ca98-47fb-823b-f6fcb252aced&pf_rd_r=5ZNPZJB39ET4E6GHZZ1S&pageLoadId=4l3aH0gjemHWJBG0&creativeId=2e6787a2-0cd0-4a6e-afe0-05766cd505e5'
 path = 'C:/Users/user/Downloads/chromedriver.exe'
-service = Service(executable_path=path)
+
+service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
+    
+    # Navigate to Google
 driver.get(web)
 driver.maximize_window()
 
